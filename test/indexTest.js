@@ -1,4 +1,6 @@
 require ( './helpers.js' );
+let i=0;
+let j=0;
 
 describe("The payroll system", function () {
   describe("populates a record from an Array", function () {
@@ -97,7 +99,7 @@ describe("The payroll system", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeInEvent(bpRecord, "2014-02-28 1400")
         let newEvent = updatedBpRecord.timeInEvents[0]
-        expect(newEvent.type).to.equal("TimeIn")
+        expect(newEvent.type).to.equal("TimeIn");
       })
 
       it("extracts the correct date", function () {
